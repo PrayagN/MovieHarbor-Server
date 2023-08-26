@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
     },
     likedMovies:[{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'Movie'
+        ref:'Movies'
     }],
 },{timestamps:true});
 
