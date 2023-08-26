@@ -12,7 +12,7 @@ const reviewSchema = mongoose.Schema(
       required: true,
     },
   },
-  { timestamps }
+  { timestamps:true }
 );
 const movieSchema = new mongoose.Schema(
   {

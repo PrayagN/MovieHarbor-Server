@@ -12,6 +12,7 @@ const path = require("path");
 const dbConnect = require("./config/config");
 const userRoute = require("./routes/userRoutes");
 const { errorHandler } = require("./middleware/errorMiddleware");
+const movieRoute = require("./routes/movieRoutes");
 dbConnect();
 
 // Middleware
@@ -24,6 +25,7 @@ app.get('/',(req,res)=>{
 });
 
 app.use('/api/users',userRoute)
+app.use('/api/movies',movieRoute)
 
 // error handling middleware
 app.use(errorHandler)
