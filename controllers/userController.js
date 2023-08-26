@@ -28,7 +28,7 @@ module.exports = {
           fullName: user.fullName,
           email: user.email,
           token: jwt.sign(
-            { id: user._id, role: "user" },
+            { id: user._id},
             process.env.JWT_SECRET_KEY,
             {
               expiresIn: "1d",
@@ -56,7 +56,7 @@ module.exports = {
           email: user.email,
           isAdmin: user.isAdmin,
           token: jwt.sign(
-            { id: user._id, role: "user" },
+            { id: user._id},
             process.env.JWT_SECRET_KEY,
             {
               expiresIn: "1d",
@@ -144,4 +144,5 @@ module.exports = {
       res.status(400).json({ message: error.message });
     }
   }),
+  
 };
